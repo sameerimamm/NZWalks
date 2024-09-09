@@ -1,0 +1,47 @@
+2024-09-06 16:41:07.339 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7017/api/regions/48ba377a-9f77-446d-2f6c-08dcce58e5d3 - null null
+2024-09-06 16:41:07.347 +05:30 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-09-06 16:41:07.353 +05:30 [INF] Route matched with {action = "GetById", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-09-06 16:41:07.358 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [Regions] AS [r]
+WHERE [r].[Id] = @__get_Item_0
+2024-09-06 16:41:07.362 +05:30 [INF] Executing OkObjectResult, writing value of type 'NZWalks.API.Models.DTO.RegionDto'.
+2024-09-06 16:41:07.366 +05:30 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API) in 9.8491ms
+2024-09-06 16:41:07.369 +05:30 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-09-06 16:41:07.371 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7017/api/regions/48ba377a-9f77-446d-2f6c-08dcce58e5d3 - 200 null application/json; charset=utf-8 31.4688ms
+2024-09-06 16:41:11.117 +05:30 [INF] Request starting HTTP/1.1 PUT https://localhost:7017/api/regions/48ba377a-9f77-446d-2f6c-08dcce58e5d3 - application/json; charset=utf-8 106
+2024-09-06 16:41:11.123 +05:30 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.UpdateById (NZWalks.API)'
+2024-09-06 16:41:11.128 +05:30 [INF] Route matched with {action = "UpdateById", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateById(NZWalks.API.Models.DTO.AddRegionDto, System.Guid) on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-09-06 16:41:11.143 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [Regions] AS [r]
+WHERE [r].[Id] = @__get_Item_0
+2024-09-06 16:41:11.154 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Regions] SET [RegionImageUrl] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2024-09-06 16:41:11.156 +05:30 [INF] Executing OkObjectResult, writing value of type 'NZWalks.API.Models.DTO.RegionDto'.
+2024-09-06 16:41:11.158 +05:30 [INF] Executed action NZWalks.API.Controllers.RegionsController.UpdateById (NZWalks.API) in 22.2291ms
+2024-09-06 16:41:11.162 +05:30 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.UpdateById (NZWalks.API)'
+2024-09-06 16:41:11.164 +05:30 [INF] Request finished HTTP/1.1 PUT https://localhost:7017/api/regions/48ba377a-9f77-446d-2f6c-08dcce58e5d3 - 200 null application/json; charset=utf-8 47.0387ms
+2024-09-06 16:41:11.177 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7017/api/regions - null null
+2024-09-06 16:41:11.180 +05:30 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-09-06 16:41:11.183 +05:30 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-09-06 16:41:11.185 +05:30 [INF] GetAll Region action method was invoked
+2024-09-06 16:41:11.187 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [Regions] AS [r]
+2024-09-06 16:41:11.190 +05:30 [INF] Finished getall data providing
+2024-09-06 16:41:11.191 +05:30 [INF] {"Id":"48ba377a-9f77-446d-2f6c-08dcce58e5d3","Code":"IND","Name":"Indiana","RegionImageUrl":"indiana.jpg"}
+2024-09-06 16:41:11.192 +05:30 [INF] {"Id":"bcb37b17-a221-42b9-2f6d-08dcce58e5d3","Code":"DFG","Name":"DF SGFS","RegionImageUrl":"DSF"}
+2024-09-06 16:41:11.193 +05:30 [INF] {"Id":"906cb139-415a-4bbb-a174-1a1faf9fb1f6","Code":"NSN","Name":"Nelson","RegionImageUrl":"\nhttps://images.pexels.com/photos/13918194/pexels-photo-13918194.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=1260\u0026h=750\u0026dpr=1"}
+2024-09-06 16:41:11.194 +05:30 [INF] {"Id":"f7248fc3-2585-4efb-8d1d-1c555f4087f6","Code":"AKL","Name":"Auckland","RegionImageUrl":"\nhttps://images.pexels.com/photos/5169056/pexels-photo-5169056.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=1260\u0026h=750\u0026dpr=1"}
+2024-09-06 16:41:11.194 +05:30 [INF] {"Id":"14ceba71-4b51-4777-9b17-46602cf66153","Code":"BOP","Name":"Bay Of Plenty","RegionImageUrl":null}
+2024-09-06 16:41:11.195 +05:30 [INF] {"Id":"f077a22e-4248-4bf6-b564-c7cf4e250263","Code":"STL","Name":"Southland","RegionImageUrl":null}
+2024-09-06 16:41:11.196 +05:30 [INF] {"Id":"cfa06ed2-bf65-4b65-93ed-c9d286ddb0de","Code":"WGN","Name":"Wellington","RegionImageUrl":"\nhttps://images.pexels.com/photos/4350631/pexels-photo-4350631.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=1260\u0026h=750\u0026dpr=1"}
+2024-09-06 16:41:11.197 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.RegionDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 16:41:11.200 +05:30 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API) in 14.8669ms
+2024-09-06 16:41:11.201 +05:30 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-09-06 16:41:11.202 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7017/api/regions - 200 null application/json; charset=utf-8 25.2712ms

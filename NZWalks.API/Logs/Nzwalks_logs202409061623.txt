@@ -1,0 +1,7 @@
+2024-09-06 16:23:58.252 +05:30 [INF] User profile is available. Using 'C:\Users\1930823\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-06 16:23:58.708 +05:30 [INF] Now listening on: https://localhost:7017
+2024-09-06 16:23:58.709 +05:30 [INF] Now listening on: http://localhost:5219
+2024-09-06 16:23:58.712 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-06 16:23:58.714 +05:30 [INF] Hosting environment: Development
+2024-09-06 16:23:58.715 +05:30 [INF] Content root path: C:\Users\1930823\Desktop\Web Dev\DotNet\NZWalks\NZWalks\NZWalks.API
+2024-09-06 16:23:59.619 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7017/swagger/index.html - null null
